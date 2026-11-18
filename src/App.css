@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.game {
+  text-align: center;
+}
+
+
+.maze {
+  width: 700px;
+  border: 5px solid blue;
+  box-sizing: border-box;
+  position: relative;
+  background: rgb(24, 24, 26);
+  margin: 22px auto;
+}
+
+.maze-shape {
+  position: absolute;
+  overflow: visible;
+}
+
+.pacman {
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  overflow: visible;
+  z-index: 10;
+}
+
+.pacman::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+
+  background:  rgb(24, 24, 26);
+
+  right: -1px;
+  top: 6px;
+  
+  clip-path: polygon(
+    0 50%,
+    100% 0,
+    100% 100%
+  );
+
+  z-index: 20;
+  
+  animation: none;
+}
+
+.pacman.moving::after{
+  animation: chomp 0.18s infinite alternate;
+}
+
+@keyframes chomp {
+  from {
+    clip-path: polygon(
+      0 50%,
+      100% 0,
+      100% 100%
+    );
+  }
+
+  to {
+    clip-path: polygon(
+      0 50%,
+      100% 25%,
+      100% 75%
+    );
+  }
+}
+
+
+.pacman.up {
+  transform: rotate(-90deg);
+}
+
+.pacman.down {
+  transform: rotate(90deg);
+}
+
+.pacman.left {
+  transform: rotate(180deg);
+}
+
+.pacman.right {
+  transform: rotate(0deg);
+}
+
+.wall {
+  position: absolute;
+  background: rgb(2, 2, 2);
+  border: px solid rgb(38, 2, 168);
+  box-sizing: border-box;
+}
+
+.t-wall-svg {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  width: 200px;
+  height: 140px;
+}
+
+.pellet {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
