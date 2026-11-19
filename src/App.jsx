@@ -762,7 +762,7 @@ function App() {
     V 114
     H 45
     V 87
-    H 9
+    H 10
     V 66
     H 45
     Z
@@ -770,7 +770,7 @@ function App() {
 
     collisionBoxes: [
       { x: 42, y: 0, width: 51, height: 117 },
-      { x: 6, y: 63, width: 63, height: 27 }
+      { x: 7, y: 63, width: 62, height: 27 }
     ]
   },
 
@@ -813,6 +813,60 @@ function App() {
 
     collisionBoxes: [
       { x: 0, y: 0, width: 85, height: 43}
+    ]
+  }, 
+
+  {
+    id: "bottom-lower-stepped-wall",
+    x: 32,
+    y: 824,
+    width: 626,
+    height: 59,
+    viewBox: "0 0 626 59",
+
+    path: `
+    M 3 3
+    H 87
+    V 34
+    H 238.5
+    V 3
+    H 403.5
+    V 34
+    H 539
+    V 3
+    H 623
+    V 56
+    H 539
+    V 53
+    H 387.5
+    V 19
+    H 254.5
+    V 53
+    H 87
+    V 56
+    H 3
+    Z
+    `,
+
+    collisionBoxes: [
+      // Left end rectangle
+      { x: 0, y: 0, width: 87, height: 59 },
+
+      // Left horizontal connecting section
+      { x: 87, y: 31, width: 151.5, height: 25 },
+
+      // Raised central section
+      { x: 238.5, y: 0, width: 165, height: 25 },
+
+      //Vertical stems -- unchanged
+
+      { x: 238.5, y: 0, width: 16, height: 53 },
+      { x: 387.5, y: 0, width: 16, height: 53 },
+
+      { x: 403.5, y: 31, width: 135.5, height: 25 },
+
+      { x: 539, y: 0, width: 87, height: 59 }
+ 
     ]
   }, 
 
