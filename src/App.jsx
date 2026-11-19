@@ -694,20 +694,20 @@ function App() {
   },
 
   {
-    id: "bottom-central-stepped",
-    x: 132,
+    id: "bottom-central-T",
+    x: 115,
     y: 685,
-    width: 443,
+    width: 460,
     height: 83,
-    viewBox: "0 0 443 83",
+    viewBox: "0 0 460 83",
 
     path: `
     M 3 3
-    H 440
+    H 457
     V 28
-    H 288
+    H 305
     V 80
-    H 155
+    H 172
     V 28
     H 3
     Z
@@ -715,64 +715,106 @@ function App() {
 
     collisionBoxes: [
       //Upper horizontal section
-      { x: 0, y: 0, width: 443, height: 31 },
+      { x: 0, y: 0, width: 460, height: 31 },
 
       //Central downward extension
-      { x: 152, y: 25, width: 139, height: 58 }
+      { x: 169, y: 25, width: 139, height: 58 }
     ]
   },
 
   {
     id: "bottom-left-sideways-T",
     x: 32,
-    y: 722,
-    width: 80,
-    height: 83,
-    viewBox: "0 0 80 83",
+    y: 685,
+    width: 108,
+    height: 117,
+    viewBox: "0 0 108 117",
 
     path: `
     M 3 3
-    H 25
-    V 30
-    H 77
-    V 53
-    H 25
-    V 80
+    H 49
+    V 66
+    H 105
+    V 87
+    H 49
+    V 114
     H 3
     Z
     `,
 
     collisionBoxes: [
-      { x: 0, y: 0, width: 28, height: 83 },
-      { x: 25, y: 27, width: 55, height: 29 }
+      { x: 0, y: 0, width: 52, height: 117 },
+      { x: 25, y: 63, width: 83, height: 27 }
     ]
   },
 
   {
     id: "bottom-right-sideways-T",
-    x: 588,
-    y: 722,
-    width: 80,
-    height: 83,
-    viewBox: "0 0 80 83",
+    x: 565,
+    y: 685,
+    width: 94,
+    height: 117,
+    viewBox: "0 0 94 117",
 
     path: `
-    M 55 3
-    H 77
-    V 80
-    H 55
-    V 53
-    H 3
-    V 30
-    H 55
+    M 45 3
+    H 90
+    V 114
+    H 45
+    V 87
+    H 9
+    V 66
+    H 45
     Z
     `,
 
     collisionBoxes: [
-      { x: 52, y: 0, width: 28, height: 83 },
-      { x: 0, y: 27, width: 55, height: 29 }
+      { x: 42, y: 0, width: 51, height: 117 },
+      { x: 6, y: 63, width: 63, height: 27 }
     ]
   },
+
+  {
+    id: "bottom-inner-left-block",
+    x: 173,
+    y: 749,
+    width: 81,
+    height: 43,
+    viewBox: "0 0 81 43",
+
+    path: `
+    M 3 3
+    H 78
+    V 40
+    H 3
+    Z
+    `,
+
+    collisionBoxes: [
+      { x: 0, y: 0, width: 81, height: 43 }
+    ]
+  },
+
+  {
+    id: "bottom-inner-right-block",
+    x: 455,
+    y: 749,
+    width: 85,
+    height: 43,
+    viewBox: "0 0 85 43",
+
+    path: `
+    M 3 3
+    H 82
+    V 40
+    H 3
+    Z
+    `,
+
+    collisionBoxes: [
+      { x: 0, y: 0, width: 85, height: 43}
+    ]
+  }, 
 
   ];
 
